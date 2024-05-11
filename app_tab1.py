@@ -50,7 +50,7 @@ def render_story_tab (text_model_pro: GenerativeModel):
         "max_output_tokens": 2048,
         }
 
-    generate_t2t = st.button("Generate Story", key="generate_t2t")
+    generate_t2t = st.button("Generate Story", type="primary", key="generate_t2t")
     if generate_t2t and prompt:
         # st.write(prompt)
         with st.spinner("Generating your story..."):
