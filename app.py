@@ -9,6 +9,7 @@ from PIL import Image
 from app_tab1 import render_story_tab
 from app_tab2 import render_mktg_campaign_tab
 from app_tab3 import render_image_playground_tab
+from app_tab4 import render_video_playground_tab
 
 # configure logging
 logging.basicConfig(level=logging.INFO)
@@ -37,16 +38,16 @@ st.set_page_config(
 
 
 # st.title("🤓 🥷:ninja: ⚔️ _SamurAI_", anchor='#title', help=None)
-st.header(':ninja: _SamurAI_ ', divider='rainbow')
+st.header(':ninja: SamurAI', divider='rainbow')
 # st.header("_NoBrainer_ - Multimodal AI with Google Gemini API")
 # st.subheader('Multimodal AI with Google Gemini API', divider='rainbow')
 
-# st.text('Multimodal AI Platform for Automated Content Generation')
-st.write("Multimodal AI Platform for Automated Content Generation")
+
+# st.write("Multimodal AI Platform for Automated Content Generation")
 
 text_model_pro, multimodal_model_pro = load_models()
 
-tab1, tab2, tab3, tab4 = st.tabs(["Story Generator", "Marketing Campaign", "Image Vision", "Video Vision"])
+tab1, tab2, tab3, tab4 = st.tabs(["Story Maker", "Marketing Campaign", "Image Vision", "Video Vision"])
 
 with tab1:
     render_story_tab(text_model_pro)
@@ -57,3 +58,6 @@ with tab2:
     
 with tab3:
     render_image_playground_tab(multimodal_model_pro)
+
+with tab4:
+    render_video_playground_tab(multimodal_model_pro)
