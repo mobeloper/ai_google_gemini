@@ -11,6 +11,11 @@ from app_tab2 import render_mktg_campaign_tab
 from app_tab3 import render_image_playground_tab
 from app_tab4 import render_video_playground_tab
 
+## References:
+## https://www.cloudskillsboost.google/catalog_lab/31226 
+## https://www.youtube.com/watch?v=S0TTQxK_OZI
+
+
 # configure logging
 logging.basicConfig(level=logging.INFO)
 # attach a Cloud Logging handler to the root logger
@@ -31,14 +36,14 @@ def load_models():
 im_logo = Image.open("./assets/logo.ico")
 
 st.set_page_config(
-    page_title="SamurAI",
+    page_title="VamurAI",
     page_icon=im_logo,
     layout="centered",
 )
 
 
 # st.title("🤓 🥷:ninja: ⚔️ _SamurAI_", anchor='#title', help=None)
-st.header(':ninja: SamurAI', divider='rainbow')
+st.header(':ninja: VamurAI', divider='rainbow')
 # st.header("_NoBrainer_ - Multimodal AI with Google Gemini API")
 # st.subheader('Multimodal AI with Google Gemini API', divider='rainbow')
 
