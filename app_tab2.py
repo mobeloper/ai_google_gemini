@@ -6,7 +6,7 @@ import logging
 # create the model prompt based on user input.
 def generate_prompt():
     # st.write("Using Gemini 1.0 Pro - Text only model")
-    st.subheader("Generate your marketing campaign")
+    st.subheader("Generate Marketing Campaign")
 
     product_name = st.text_input("What is the name of the product? \n\n",key="product_name",value="ZomZoo")
     product_category = st.radio("Select your product category: \n\n",["Clothing","Electronics","Food","Health & Beauty","Home & Garden"],key="product_category",horizontal=True)
@@ -58,9 +58,7 @@ def generate_prompt():
 
 # function to render the story tab, and call the model, and display the model prompt and response.
 def render_mktg_campaign_tab (text_model_pro: GenerativeModel):
-    # st.write("Using Gemini 1.0 Pro - Text only model")
-    st.subheader("Generate a marketing campaign")
-
+   
     prompt = generate_prompt()
 
     config = {
